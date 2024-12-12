@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/src/assets/images/icon_evento.png"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evento Navideño</title>
+  </head>
+  <body class="font-mon">
+    <div class="illustration">
+      <div class="i-large"></div>
+      <div class="i-medium"></div>
+      <div class="i-small"></div>
+    </div>
+
+    <header
+      class="relative w-full overflow-y-hidden color-white bg-header-image bg-no-repeat bg-cover min-h-[auto]"
+    >
+      <div
+        class="z-10 relative flex flex-col gap-5 py-6 justify-center items-center"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <img src="src/assets/images/genus_logo.png" alt="" class="w-56" />
+          <img
+            src="src/assets/images/logo_royal_sin_fondo.webp"
+            alt="logo royal prestige distribuidor autorizado"
+            class="w-44"
+          />
+        </div>
+
+        <div class="text-center">
+          <h1 class="text-white text-[3rem] font-christmas font-bold">
+            Evento de Navidad Cocina con lo mejor de Royal Prestige
+          </h1>
+          <h2 class="text-white text-[1rem] w-[90%] m-auto md:w-full font-bold">
+            Novedades para cocinar saludable y con estilo, utilizando lo mejor
+            de los utensilios de Royal Prestige
+          </h2>
+          <a
+            href="#form"
+            class="block w-[80%] lg:w-[40%] mx-auto gold_bg text-xl text-white px-5 py-2 rounded-md mt-5 font-bold"
+          >
+            !Quiero apartar mi cupo!
+          </a>
+        </div>
+        <div>
+          <img
+            class="w-[700px]"
+            src="src/assets/images/ollas_juntas_header.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+
+    <section id="contador" class="bg-neutral pb-7">
+      <div class="flex flex-col items-center justify-center pb-4">
+        <div class="flex flex-col items-center gap-1 mt-5">
+          <h2
+            class="text-3xl text-right font-christmas font-bold py-8 md:flex-1"
+          >
+            ¡No te lo pierdas! <br />Cupos Limitados
+          </h2>
+
+          <div class="md:flex-1 md:text-xl text-center">
+            <h3 class="font-bold text-lg">DOMINGO 15 DE DICIEMBRE</h3>
+            <h3 class="font-bold text-lg">Houston, TX 77092</h3>
+          </div>
+        </div>
+        <div
+          class="grid auto-cols-max grid-flow-col gap-5 justify-center text-center p-1 md:p-8"
+        >
+          <div
+            class="bg-base-100 rounded-box text-neutral-content flex flex-col p-2"
+          >
+            <span class="countdown font-mono text-5xl text-white">
+              <span id="days" style="--value: 00"></span>
+            </span>
+            días
+          </div>
+          <div
+            class="bg-base-100 rounded-box text-neutral-content flex flex-col p-2"
+          >
+            <span class="countdown font-mono text-5xl text-white">
+              <span id="hours" style="--value: 00"></span>
+            </span>
+            horas
+          </div>
+          <div
+            class="bg-base-100 rounded-box text-neutral-content flex flex-col p-2"
+          >
+            <span class="countdown font-mono text-5xl text-white">
+              <span id="min" style="--value: 00"></span>
+            </span>
+            min
+          </div>
+          <div
+            class="bg-base-100 rounded-box text-neutral-content flex flex-col p-2"
+          >
+            <span class="countdown font-mono text-5xl text-white">
+              <span id="sec" style="--value:${counter};"></span>
+            </span>
+            seg
+          </div>
+        </div>
+        <a
+          class="btn gold_bg border-white hover:border-accent mt-3 md:mt-0 z-10"
+          href="#form"
+          >Reserva tu entrada</a
+        >
+      </div>
+    </section>
+
+    <section
+      id="form_container"
+      class="grid grid-cols-1 md:grid-cols-2 bg-base-100 text-white lg:items-center form-container"
+    >
+      <div
+        class="col-span-1 w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24"
+      >
+        <div class="mx-auto max-w-lg text-center">
+          <div class="flex justify-center">
+            <img
+              src="src/assets/images/logo_navidad.png"
+              alt="logo royal prestige distribuidor autorizado"
+              class="w-44"
+            />
+          </div>
+          <h1 class="text-2xl font-bold font-christmas sm:text-3xl">
+            Reserva tu cupo hoy!
+          </h1>
+
+          <p class="mt-4">
+            No dejes que otros te lo cuente y vive de una experiencia unica en
+            familia junto a nosotros, en Houston Tx, 77092
+          </p>
+        </div>
+
+        <form
+          id="form"
+          method="post"
+          action="https://script.google.com/macros/s/AKfycbzkiEN814WjC4xlrEveZzb8gU-UaOCAI7QtXcPEVMFmLNMx0cfWB2z20bn9CEuK26CM/exec"
+          class="mx-auto mb-0 mt-8 max-w-md space-y-4 text-gray-400"
+        >
+          <div>
+            <label for="name" class="sr-only">Nombre</label>
+
+            <div class="relative z-10">
+              <input
+                id="name"
+                name="nombre"
+                type="name"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Nombre completo"
+                required
+              />
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-user"></i>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label for="question" class="sr-only"
+              >¿Conoces la marca de royal prestige?</label
+            >
+
+            <div class="relative z-10">
+              <select
+                id="marca"
+                name="marca"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                required
+              >
+                <option value="" disabled selected>
+                  ¿Conoces la marca de royal prestige?
+                </option>
+                <option value="cliente">Si, soy cliente</option>
+                <option value="Si, no soy cliente">Si, no soy cliente</option>
+                <option value="No conoce la marca">No conozco la marca</option>
+              </select>
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-users"></i>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label for="question" class="sr-only">Elige tu regalo</label>
+
+            <div class="relative z-10">
+              <select
+                id="regalo"
+                name="regalo"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                required
+              >
+                <option value="" disabled selected>Elige tu regalo</option>
+                <option value="Kit barista">Kit Barista</option>
+                <option value="Tabla">Tabla de bambú</option>
+                <option value="utensilios">Utensilios de lujo</option>
+              </select>
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-users"></i>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label for="question" class="sr-only">¿Hora de preferencia?</label>
+
+            <div class="relative z-10">
+              <select
+                id="hora"
+                name="hora"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                required
+              >
+                <option value="" disabled selected>¿Hora de preferencia?</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+              </select>
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-users"></i>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="sr-only">Correo</label>
+
+            <div class="relative z-10">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Email"
+              />
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label for="phone" class="sr-only">Telefono</label>
+
+            <div class="relative z-10">
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Telefono"
+                required
+              />
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-phone"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-end z-10">
+            <button
+              type="submit"
+              class="inline-block z-10 rounded-lg gold_bg px-5 py-3 text-sm font-medium text-white"
+            >
+              Reservar Cupo
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-span-1 h-64 md:h-full w-full hidden md:block">
+        <img
+          alt=""
+          src="src/assets/images/navidad_royal.jpeg"
+          class="h-full w-full object-cover"
+        />
+      </div>
+    </section>
+
+    <section id="feature_1" class="min-h-[500px] flex items-stretch text-white">
+      <div
+        class="lg:flex w-1/2 hidden bg-feature-one-image bg-no-repeat bg-cover relative items-center"
+      >
+        <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
+        <div class="w-full px-24 z-10">
+          <h2 class="text-5xl font-christmas font-bold text-left tracking-wide">
+            Ven en familia al mejor evento del año donde disfrutarás:
+          </h2>
+        </div>
+      </div>
+      <div
+        class="relative lg:w-1/2 w-full flex items-center justify-center text-center bg-accent md:px-16 px-0 z-0"
+      >
+        <div
+          class="absolute bg-feature-one-image lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center"
+        >
+          <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
+        </div>
+        <div class="w-full px-3 py-8 md:py-12 md:px-0 z-20">
+          <div>
+            <h2
+              class="text-4xl text-center py-4 font-christmas font-bold tracking-wide"
+            >
+              Solo por tu asistencia recibirás:
+            </h2>
+            <ul class="flex flex-col text-2xl gap-4">
+              <li class="flex items-center gap-2 text-left">
+                <span
+                  ><img
+                    class="hidden md:block w-[40px] h-auto"
+                    src="src/assets/images/arbol.svg"
+                    alt="arbol navideno svg"
+                  />
+                  <img
+                    class="md:hidden w-[40px] h-auto"
+                    src="src/assets/images/arbol_dorado.svg"
+                    alt="arbol navideno svg"
+                  />
+                </span>
+                <p class="flex-1">
+                  <span
+                    class="font-christmas font-bold text-accent md:text-base-100 uppercase"
+                    >Obsequios</span
+                  >
+                  premium de la marca royal prestige
+                </p>
+              </li>
+              <li class="flex items-center gap-2 text-left">
+                <span
+                  ><img
+                    class="hidden md:block w-[40px] h-auto"
+                    src="src/assets/images/arbol.svg"
+                    alt="arbol navideno svg" />
+                  <img
+                    class="md:hidden w-[40px] h-auto"
+                    src="src/assets/images/arbol_dorado.svg"
+                    alt="arbol navideno svg"
+                /></span>
+                <p class="flex-1">
+                  <span
+                    class="font-christmas font-bold text-accent md:text-base-100 uppercase"
+                    >Oportunidad</span
+                  >
+                  de participar en diversos sorteos de los productos de la línea
+                  de la marca Royal Prestige en el transcurso del evento.
+                </p>
+              </li>
+              <li class="flex items-center gap-2 text-left">
+                <span
+                  ><img
+                    class="hidden md:block w-[40px] h-auto"
+                    src="src/assets/images/arbol.svg"
+                    alt="arbol navideno svg" />
+                  <img
+                    class="md:hidden w-[40px] h-auto"
+                    src="src/assets/images/arbol_dorado.svg"
+                    alt="arbol navideno svg"
+                /></span>
+                <p class="flex-1">
+                  <span
+                    class="font-christmas font-bold text-accent md:text-base-100 uppercase"
+                    >Demostración
+                  </span>
+                  de productos en vivo, donde podrás ver cómo funcionan y
+                  degustar de diversos sabores culinarios para los grandes y
+                  pequeños de la casa.
+                </p>
+              </li>
+              <li class="flex items-center gap-2 text-left">
+                <span
+                  ><img
+                    class="hidden md:block w-[40px] h-auto"
+                    src="src/assets/images/arbol.svg"
+                    alt="arbol navideno svg" />
+                  <img
+                    class="md:hidden w-[40px] h-auto"
+                    src="src/assets/images/arbol_dorado.svg"
+                    alt="arbol navideno svg"
+                /></span>
+                <span
+                  class="font-christmas font-bold text-accent md:text-base-100 uppercase"
+                  >Regalos</span
+                >
+                y sorpresas
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feature_2" class="p-4 lg:p-8 text-white bg-perlado">
+      <div class="container mx-auto p-4 my-6 space-y-2 text-center">
+        <h2 class="text-5xl font-bold font-christmas">
+          El evento del año para los amantes de la comida saludable
+        </h2>
+        <p class="font-mon text-3xl font-bold">Houston Tx, 77092</p>
+      </div>
+
+      <div class="container mx-auto space-y-12">
+        <div
+          class="flex flex-col overflow-hidden bg-neutral rounded-md shadow-sm lg:flex-row lg:h-[500px]"
+        >
+          <img
+            src="src/assets/images/santa.jpeg"
+            alt=""
+            class="dark:bg-gray-500"
+          />
+          <div class="flex flex-col justify-center flex-1 p-6">
+            <span class="text-xs uppercase">Santa llegó a Houston</span>
+            <h3 class="text-3xl font-bold">
+              No hay edad para sonreírle a la Navidad Podrás contar con una
+              fotografía para obtener la magia de Santa 🎅 para toda la familia
+            </h3>
+            <a
+              href="#form"
+              class="block z-10 self-start gold_bg mt-4 p-4 text-xl font-bold rounded hover:bg-white hover:font-bold"
+            >
+              !Quiero mi foto con santa!
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col overflow-hidden bg-neutral rounded-md shadow-sm lg:flex-row lg:h-[500px]"
+        >
+          <img
+            src="src/assets/images/mostrando_sarten.jpeg"
+            alt=""
+            class="dark:bg-gray-500 flex-1"
+          />
+          <div class="flex flex-col justify-center flex-1 p-6">
+            <span class="text-xs uppercase"
+              >El evento se celebrará en tres horarios</span
+            >
+            <h3 class="text-3xl font-bold">
+              Selecciona tu horario según tu preferencia te esperamos!
+            </h3>
+            <ul class="flex flex-col gap-3 my-4 text-xl">
+              <li class="flex gap-2 items-center">
+                <span
+                  ><img
+                    class="hidden md:block w-[30px] h-auto"
+                    src="src/assets/images/arbol_dorado.svg"
+                    alt="arbol navideno svg" /></span
+                >11:00 AM
+              </li>
+              <li class="flex gap-2 items-center">
+                <span
+                  ><img
+                    class="hidden md:block w-[30px] h-auto"
+                    src="src/assets/images/arbol_dorado.svg"
+                    alt="arbol navideno svg" /></span
+                >2:00 PM
+              </li>
+              <li class="flex gap-2 items-center">
+                <span
+                  ><img
+                    class="hidden md:block w-[30px] h-auto"
+                    src="src/assets/images/arbol_dorado.svg"
+                    alt="arbol navideno svg" /></span
+                >5:00 PM
+              </li>
+            </ul>
+            <a
+              href="#form"
+              class="block z-10 self-start gold_bg p-4 text-xl font-bold rounded hover:bg-white hover:font-bold"
+            >
+              !Quiero mi pase VIP!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="grid grid-cols-1 md:grid-cols-2 max-h-[500px]">
+      <div class="col-span-1 flex justify-center items-center py-8 bg-accent">
+        <img
+          src="src/assets/images/cocina_familia.jpg"
+          alt=""
+          class="w-[400PX] h-[400PX] p-5 bg-base-100 rounded-md"
+        />
+      </div>
+      <div class="col-span-1 flex flex-col justify-center bg-neutral">
+        <div
+          class="rounded-lg border bg-card text-card-foreground border-none shadow-none text-base-100"
+          data-v0-t="card"
+        >
+          <div class="p-6 pt-6">
+            <h2 class="text-4xl text-accent md:text-5xl font-bold mb-6">
+              Sobre Nosotros
+            </h2>
+            <p
+              class="text-lg text-white text-justify text-muted-foreground leading-relaxed"
+            >
+              Con nuestros 8 años de experiencia ayudando a cientos de familias,
+              hemos representando la marca a través de los hogares que nos han
+              brindado su confianza y apoyo incondicional, logrando asesorarlos
+              para transformar sus vidas y sus generaciones, llevando calidad a
+              sus cocinas para más corazones contentos con los utensilios de
+              Royal Prestige.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="modal" class="hidden">
+      <div
+        id="backdrop"
+        class="fixed top-0 w-full h-screen z-40 bg-accent opacity-10"
+      ></div>
+      <div
+        id="modal-content"
+        class="fixed flex flex-col gap-3 justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-base-100 p-10 rounded-lg"
+      >
+        <img src="src/assets/images/logo_navidad.png" alt="" class="w-44" />
+        <h2 class="text-3xl font-bold font-christmas text-center">
+          Reservando tu cupo VIP...
+        </h2>
+        <span class="loading loading-spinner text-accent w-[100px]"></span>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
+
+    <script>
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const form = document.getElementById("form");
+      const modal = document.getElementById("modal");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        modal.classList.remove("hidden");
+
+        // Perform an AJAX request to submit the form
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              var response = xhr.responseText;
+              console.log(response);
+              form.reset(); // Clear the form fields
+              if (window.location.href.includes("#form")) {
+                modal.classList.add("hidden");
+                window.location.href = `${window.location.href.replace(
+                  "#form",
+                  "reclamar_entrada"
+                )}`; // Redirect to a new page
+              } else {
+                modal.classList.add("hidden");
+                window.location.href = `${window.location.href}reclamar_entrada`; // Redirect to a new page
+              }
+            } else {
+              // Error response
+              console.error("Error:", xhr.status, xhr.statusText);
+              modal.classList.add("hidden");
+              alert(
+                "Ocurrió un error con el registro. Por favor, intente de nuevo."
+              );
+            }
+          }
+        };
+        xhr.send(new FormData(form));
+      });
+    </script>
+  </body>
+</html>
